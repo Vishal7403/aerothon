@@ -23,7 +23,7 @@ export default function COMPANY_COMPONENT_1(props) {
               let company=props.company;
               let column_name=column;
               let send={company,column_name}
-              const res=await axios.post('https://automobile-data-analysis.herokuapp.com//boxplot',send)
+              const res=await axios.post('http://localhost:5000/boxplot',send)
               setboxplot_data(res.data)
             } catch (err) {
                 console.error(err);
@@ -36,7 +36,7 @@ export default function COMPANY_COMPONENT_1(props) {
               let company_name=props.company;
               let col_1_name='Power(in PS)';
               let send={company_name,col_1_name}
-              const res=await axios.post('https://automobile-data-analysis.herokuapp.com//multiple_line_chart',send)
+              const res=await axios.post('http://localhost:5000/multiple_line_chart',send)
               setline_data(res.data)
             } catch (err) {
                 console.error(err);
@@ -49,7 +49,7 @@ export default function COMPANY_COMPONENT_1(props) {
               let company=props.company;
               let column_name=column;
               let send={company,column_name}
-              const res=await axios.post('https://automobile-data-analysis.herokuapp.com//power',send)
+              const res=await axios.post('http://localhost:5000/power',send)
               setpower_data(res.data)
             } catch (err) {
                 console.error(err);

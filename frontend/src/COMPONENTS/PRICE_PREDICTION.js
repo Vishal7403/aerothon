@@ -15,7 +15,7 @@ export default function PRICE_PREDICTION(props) {
 
     const fetch_prediction_col=async()=>{
         try {
-            const res= await axios.post('https://automobile-data-analysis.herokuapp.com//fetch_prediction_col')
+            const res= await axios.post('http://localhost:5000/fetch_prediction_col')
             let res_data=res.data
             setcol1(res_data[0])
             setcol2(res_data[1])
@@ -55,7 +55,7 @@ const col_5=[
 
 const prediction_value=async()=>{
     try {let send={input1,input2,input3,input4}
-        const res=await axios.post('https://automobile-data-analysis.herokuapp.com//prediction_value',send)
+        const res=await axios.post('http://localhost:5000/prediction_value',send)
         let res_data=res.data
         setvalue(res_data)
         } catch (err) {

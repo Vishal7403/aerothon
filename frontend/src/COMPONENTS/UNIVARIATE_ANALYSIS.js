@@ -33,7 +33,7 @@ export default function VISUALIZE_UNIVARITE(props) {
      let column_name=columns_inputt;
         const send={column_name}
         try {
-        const res=await axios.post('https://automobile-data-analysis.herokuapp.com//fetch_data',send)
+        const res=await axios.post('http://localhost:5000/fetch_data',send)
          temp=res.data
         } catch (err) {
             // Handle Error Here

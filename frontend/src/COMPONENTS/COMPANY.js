@@ -29,7 +29,7 @@ const col_model=[
 
 const fetch_companies=async()=>{
   try {
-    const res=await axios.post('https://automobile-data-analysis.herokuapp.com//fetch_comp_names')
+    const res=await axios.post('http://localhost:5000/fetch_comp_names')
     let res_data=res.data;
     setcomp(res_data)
     } catch (err) {
@@ -49,7 +49,7 @@ const company_data=async(column)=>{
       let company_name=column;
       setcompany_name(column)
       let send={company_name}
-      const res=await axios.post('https://automobile-data-analysis.herokuapp.com//company_data',send)
+      const res=await axios.post('http://localhost:5000/company_data',send)
       let res_data=res.data;
       setmodel_data(res_data[0])
       setmodel_label(res_data[1])

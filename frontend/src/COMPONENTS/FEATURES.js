@@ -28,7 +28,7 @@ export default function FEATURE(props) {
             try {
               let column_name=column
               let send={column_name}
-              const res=await axios.post('https://automobile-data-analysis.herokuapp.com//top_5_cars',send)
+              const res=await axios.post('http://localhost:5000/top_5_cars',send)
               let res_data=res.data
               setlabel(res_data[0])
               setdata(JSON.parse(res_data[1]))

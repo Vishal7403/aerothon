@@ -31,7 +31,7 @@ export default function CORRELATION(props) {
     const fetch_correlation_data=async(column_1,column_2)=>{
            const send={column_1,column_2}
            try {
-           const res=await axios.post('https://automobile-data-analysis.herokuapp.com//fetch_correlation_data',send)
+           const res=await axios.post('http://localhost:5000/fetch_correlation_data',send)
             res_data=res.data
             setdata_1(JSON.parse(res_data[0]))
             setdata_2(JSON.parse(res_data[1]))

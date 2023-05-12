@@ -38,7 +38,7 @@ export default function COMPANY_COMPONENT_2(props) {
               let company=props.company;
               let column_name=column;
               let send={company,column_name}
-              const res=await axios.post('https://automobile-data-analysis.herokuapp.com//mileage',send)
+              const res=await axios.post('http://localhost:5000/mileage',send)
               setmileage_data(res.data)
             } catch (err) {
                 console.error(err);
@@ -51,7 +51,7 @@ export default function COMPANY_COMPONENT_2(props) {
             let company_name=props.company;
             let col_1_name='City_Mileage(in km/litre)';
             let send={company_name,col_1_name}
-            const res=await axios.post('https://automobile-data-analysis.herokuapp.com//multiple_line_chart',send)
+            const res=await axios.post('http://localhost:5000/multiple_line_chart',send)
             setline_data(res.data)
           } catch (err) {
               console.error(err);
@@ -63,7 +63,7 @@ export default function COMPANY_COMPONENT_2(props) {
               let company=props.company;
               let column_name=column;
               let send={company,column_name}
-              const res=await axios.post('https://automobile-data-analysis.herokuapp.com//company_numeric_col',send)
+              const res=await axios.post('http://localhost:5000/company_numeric_col',send)
               setcol_data(res.data)
             } catch (err) {
                 console.error(err);

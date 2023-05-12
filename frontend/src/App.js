@@ -41,11 +41,11 @@ function App() {
 }
   fetchMyAPI()
 },[])
-
+//https://automobile-data-analysis.herokuapp.com//fetch_yearly_data
 const fetch_yearly_data=async()=>{
   let res_data;
   try {
-    const res=await axios.post('https://automobile-data-analysis.herokuapp.com//fetch_yearly_data')
+    const res=await axios.post('http://localhost:5000/fetch_yearly_data')
     res_data=res.data
     } catch (err) {
         console.error(err);
@@ -61,7 +61,7 @@ const fetch_yearly_data=async()=>{
 
   const fetch_columns=async()=>{
     try {
-      const res=await axios.post('https://automobile-data-analysis.herokuapp.com//fetch_columns')
+      const res=await axios.post('http://localhost:5000/fetch_columns')
       let res_data=res.data
       setcolumns_list(res_data[0])
       setcolumns_display(res_data[1])
@@ -73,7 +73,7 @@ const fetch_yearly_data=async()=>{
   try {
     let column_name='Make'
     let send={column_name}
-    const res=await axios.post('https://automobile-data-analysis.herokuapp.com//fetch_make',send)
+    const res=await axios.post('http://localhost:5000/fetch_make',send)
     temp=res.data
     } catch (err) {
         console.error(err);

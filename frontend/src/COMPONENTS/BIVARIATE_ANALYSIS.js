@@ -54,7 +54,7 @@ useEffect(()=>{
 const visualize=async(column_1,column_2)=>{
        const send={column_1,column_2}
        try {
-       const res=await axios.post('https://automobile-data-analysis.herokuapp.com//fetch_bivarite',send)
+       const res=await axios.post('http://localhost:5000/fetch_bivarite',send)
        temp=res.data 
           setdataa(temp[0])
           setbar_label(JSON.parse(temp[1]))

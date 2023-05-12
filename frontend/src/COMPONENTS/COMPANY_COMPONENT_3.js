@@ -17,7 +17,7 @@ export default function COMPANY_COMPONENT_3(props) {
             try {
               let company_name=props.company;
               let send={company_name}
-              const res=await axios.post('https://automobile-data-analysis.herokuapp.com//company_component_3',send)
+              const res=await axios.post('http://localhost:5000/company_component_3',send)
               let res_data=res.data
               setfuel_data(res_data[0])
               setfuel_label(res_data[1])
